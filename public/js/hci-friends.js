@@ -44,3 +44,13 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+function nameclick(e) {
+	e.preventDefault();
+
+	let txt = $(this).text();
+	console.log('1.' + txt + ', annagram: 2.' + anagrammedName(txt) + '3');
+	$(this).text(anagrammedName(txt));
+}
+
+$(".budName h3").click(nameclick);
